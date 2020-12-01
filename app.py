@@ -4,7 +4,6 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-# import dash_bootstrap_components as dbc
 import plotly.express as px
 
 import plotly.graph_objs as go
@@ -32,6 +31,7 @@ app.layout = html.Div([
     html.Div(id='display-value')
 ])
 
+
 @app.callback(dash.dependencies.Output('display-value', 'children'),
               [dash.dependencies.Input('dropdown', 'value')])
 def display_value(value):
@@ -42,8 +42,6 @@ colors = {
     'background': '#ffffff',
     'text': '#000000'
 }
-size = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
-        14, 15, 16, 17, 18, 19, 20]
 
 app.layout = html.Div(style={'backgroundColor': colors['background'], 'margin': '20px', 'padding': '50px'}, children=[
     html.H1(
